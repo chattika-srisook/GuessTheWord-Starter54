@@ -59,7 +59,7 @@ class ScoreFragment : Fragment() {
         binding.lifecycleOwner = viewLifecycleOwner
 
         // Add observer for score
-        
+
 
 
 
