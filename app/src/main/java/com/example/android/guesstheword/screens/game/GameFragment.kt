@@ -76,7 +76,7 @@ class GameFragment : Fragment() {
 
 
     /** Methods for buttons presses **/
-    
+
 
     private fun gameFinished() {
         Toast.makeText(activity, "Game has just finished", Toast.LENGTH_SHORT).show()
