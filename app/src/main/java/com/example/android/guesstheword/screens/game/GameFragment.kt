@@ -50,6 +50,7 @@ class GameFragment : Fragment() {
                 container,
                 false
         )
+
         Log.i("GameFragment", "Called ViewModelProviders.of")
 
         viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
@@ -68,7 +69,7 @@ class GameFragment : Fragment() {
         viewModel.eventGameFinish.observe(viewLifecycleOwner, Observer<Boolean> { hasFinished ->
             if (hasFinished) gameFinished()
         })
-
+        binding.gameViewModel = viewModel
         binding.correctButton.setOnClickListener { onCorrect() }
         binding.skipButton.setOnClickListener { onSkip() }
         binding.endGameButton.setOnClickListener { onEndGame() }
